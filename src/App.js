@@ -1,24 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import TestPage from './page/TestPage';
+import LoginHandeler from './login/LoginHandeler';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<TestPage/>} />
+        <Route
+          path="/auth/kakao/callback" //redirect_url
+          element={<LoginHandeler />} //당신이 redirect_url에 맞춰 꾸밀 컴포넌트
+        />
+      </Routes>
+    </BrowserRouter>
+
   );
 }
 
