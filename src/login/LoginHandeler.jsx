@@ -6,24 +6,39 @@ const LoginHandeler = (props) => {
     const navigate = useNavigate();
     // 인가코드 백으로 보내는 작업 하는곳
     const code = new URL(window.location.href).searchParams.get("code");
+    console.log(code);
 
     //인가코드 백으로 보내는 코드
     useEffect(() => {
-        const kakaoLogin = async () => {
-            await api.get(`${process.env.REACT_APP_REDIRECT_URL}/?code=${code}`, {
+        if (!code) {
+          alert("인가 코드가 존재하지 않습니다.");
+          navigate("/");
+          return;
+        }
+
+        const kakaoLogin = async (e) => {
+          e.preventDefault();
+            try {
+              const res = await api.get(`${process.env.REACT_APP_REDIRECT_URL}/?code=${code}`, {
                 headers: {
-                    "Content-Type": "application/json;charset=utf-8",
-                    "Access-Control-Allow-Origin": "*",
+                  "Content-Type": "application/json;charset=utf-8",
                 },
-            }).then((res) => { //백에서 완료후 우리사이트 전용 토큰 넘겨주는게 성공했다면
-                console.log(res);
-                //계속 쓸 정보들( ex: 이름) 등은 localStorage에 저장해두자
-                //localStorage.setItem("name", res.data.account.kakaoName);
-                //로그인이 성공하면 이동할 페이지
-                navigate("/home");
-            });
-        };
-        kakaoLogin();
+              });
+              console.log(res);
+              // accessToken과 refreshToken을 응답에서 추출
+              const { accessToken, refreshToken } = res.data;
+
+              // 로컬 스토리지에 저장
+              localStorage.setItem("accessToken", accessToken);
+              localStorage.setItem("refreshToken", refreshToken);
+              navigate("/home");
+            } catch (err) {
+              console.error("로그인 실패", err);
+              alert('로그인 처리 중 오류가 발생했습니다. 재시도해주세요.');
+            }
+          };
+        
+          kakaoLogin();
     }, [props.history]);
     
       return (
