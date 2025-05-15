@@ -23,7 +23,6 @@ const KakaoImg = styled.img `
 const TestPage = () => {
     const [input1,setInput1] = useState("");
     const [input2,setInput2] = useState("");
-    const [input3,setInput3] = useState("");
 
     const onChange1 = (e) => {
         setInput1(e.target.value);
@@ -31,18 +30,20 @@ const TestPage = () => {
     const onChange2 = (e) => {
         setInput2(e.target.value);
     }
-    const onChange3 = (e) => {
-        setInput3(e.target.value);
-    }
 
-    const onSubmit = async() => {
+    const onSubmit = async(e) => {
+        e.preventDefault();
         const data = {
-            input1 : input1,
-            input2 : input2,
-            input3 : input3
+            clazzTitle : input1,
+            clazzDescription : input2,
+            clazzPrice : 2000,
+            clazzProfileImage : "image.jpg",
+            latitude : "20", //위도
+            longitude : "30", //경도
+            category : "줄넘기"
         }
         try {
-            const res = await api.post(``,{data});
+            const res = await api.post(`api/clazz/saveClazz`,{data});
             console.log(res)
         } catch (error) {
             console.error(error);
@@ -56,9 +57,6 @@ const TestPage = () => {
                 </div>
                 <div>
                     <input type="text" onChange={onChange2}/>
-                </div>
-                <div>
-                    <input type="text" onChange={onChange3}/>
                 </div>
                 <div>
                     <button type="submit">제출하기</button>
