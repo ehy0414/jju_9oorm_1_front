@@ -32,32 +32,34 @@ export const LoginBadge = () => {
 };
 
 const BadgeContainer = styled.div`
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 `;
 
 const BadgeBackground = styled.div`
-  width: 66px;
-  height: 24px;
-  margin-right: 70px;
-  border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.13);
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    width: 66px;
+    height: 24px;
+    margin-right: 70px;
+    margin-top:70px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.13);
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;
 
 const BadgeText = styled.p`
-  color: #f00;
-  font-family: "Gamja Flower";
-  font-size: 11px;
-  font-weight: bold;
-  margin: 0;
+    color: #f00;
+    font-family: 'Jua', sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    margin: 0;
 `;
 
 const DiamondIconWrapper = styled.div`
-  position: absolute;
-  top: 14px; /* 말풍선 밑에 오도록 조정 */
-  left: 6px;
+    position: absolute;
+    top: 14px; /* 말풍선 밑에 오도록 조정 */
+    margin-top:70px;
+    left: 6px;
 `;
