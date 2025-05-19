@@ -1,9 +1,9 @@
 "use client";
 import * as React from "react";
 import styled from "styled-components";
-import { Logo } from "../login/Logo";
-import { LoginBadge } from "../login/LoginBadge";
-import { KakaoLogin } from "../login/KakaoLogin";
+import { Logo } from "../modules/login/Logo";
+import { LoginBadge } from "../modules/login/LoginBadge";
+import { KakaoLogin } from "../modules/login/KakaoLogin";
 
 
 const LoginPage = () => {

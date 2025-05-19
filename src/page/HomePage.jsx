@@ -1,8 +1,8 @@
 "use client";
 import styled from "styled-components";
-import { Logo } from "../home/Logo";
-import { SearchSection } from "../home/SearchSection";
-import { ImageBanner } from "../home/ImageBanner";
+import { Logo } from "../modules/home/Logo";
+import { SearchSection } from "../modules/home/SearchSection";
+import { ImageBanner } from "../modules/home/ImageBanner";
 
 
 const SearchContainer = styled.main`

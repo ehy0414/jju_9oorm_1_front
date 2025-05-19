@@ -1,4 +1,4 @@
-import { KAKAO_AUTH_URL } from "../login/OAuth";
+import { KAKAO_AUTH_URL } from "../modules/login/OAuth";
 import kakao_login from "../assets/kakao_login.png";
 import styled from "styled-components";
 import api from "../api/axios";
