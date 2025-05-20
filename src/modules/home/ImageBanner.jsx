@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import image1 from "../home/images/cake.png";
+import image1 from "../home/images/video.png";
 import image2 from "../home/images/painting.png";
 import image3 from "../home/images/uiux.png";
 
