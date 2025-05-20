@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { KAKAO_AUTH_URL } from "./OAuth";
-import kakao_login from "../assets/kakao_login.png";
+import kakao_login from "../../assets/kakao_login.png";
 
 export const KakaoLogin = () => {
   return (
