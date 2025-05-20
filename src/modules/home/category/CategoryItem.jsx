@@ -12,6 +12,7 @@ const ItemWrapper = styled.article`
     flex: 1 0 0;
     border-radius: 6px;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 
     transition: all 0.3s ease; /* 부드러운 애니메이션 */
 
