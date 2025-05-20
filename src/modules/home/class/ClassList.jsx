@@ -10,6 +10,7 @@ import painting from "../images/painting.png";
 const ListSection = styled.section`
   display: flex;
   max-width: 94%;
+  margin-bottom: 100px;
   padding-right: 12px;
   padding-left: 12px;
   flex-direction: column;
