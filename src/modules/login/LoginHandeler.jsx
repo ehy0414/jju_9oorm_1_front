@@ -16,21 +16,22 @@ const LoginHandeler = (props) => {
           return;
         }
 
-        const kakaoLogin = async (e) => {
-          e.preventDefault();
+        const kakaoLogin = async () => {
             try {
-              const res = await api.get(`${process.env.REACT_APP_REDIRECT_URL}/?code=${code}`, {
+              const res = await api.get(`/auth/kakao/callback?code=${code}`, {
                 headers: {
-                  "Content-Type": "application/json;charset=utf-8",
-                },
+                  "Content-Type": "application/json; charset=utf-8",
+                }, 
+              //withCredentials: true,
               });
-              console.log(res);
+              console.log(res.data);
               // accessToken과 refreshToken을 응답에서 추출
               const { accessToken, refreshToken } = res.data;
 
               // 로컬 스토리지에 저장
               localStorage.setItem("accessToken", accessToken);
-              localStorage.setItem("refreshToken", refreshToken);
+              //아직 안됨
+              //localStorage.setItem("refreshToken", refreshToken);
               navigate("/home");
             } catch (err) {
               console.error("로그인 실패", err);
@@ -39,7 +40,7 @@ const LoginHandeler = (props) => {
           };
         
           kakaoLogin();
-    }, [props.history]);
+    }, []);
     
       return (
         <div className="LoginHandeler">

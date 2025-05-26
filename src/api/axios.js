@@ -2,7 +2,7 @@ import axios from "axios";
 
 const api = axios.create({
     // spring server url
-    baseURL: "http://172.20.10.5:8080/"
+    baseURL: "http://172.20.10.3:8080/"
     //baseURL: "http://localhost:8080/"
 })
 
