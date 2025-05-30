@@ -9,6 +9,7 @@ import Footer from "../layout/footer/Footer";
 import { BestReviewSection } from "../modules/home/review/BestReviewSection";
 import TextContent from "../modules/home/nowReview/TextContent";
 import Post from "../modules/home/nowReview/Post";
+import BestCategoryList from "../modules/home/bestCategory/BestCategoryList";
 
 
 const SearchContainer = styled.main`
@@ -73,6 +74,7 @@ function HomePage() {
         </PostScrollContainer>
       </SectionWrapper>
       
+      <BestCategoryList />
       <Footer />
     </SearchContainer>
   );
