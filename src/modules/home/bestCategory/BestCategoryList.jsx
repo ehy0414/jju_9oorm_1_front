@@ -35,7 +35,6 @@ const ListSection = styled.section`
   color: rgba(0, 0, 0, 1);
   font-weight: 500;
   justify-content: center;
-  margin-bottom: 80px;
 `;
 
 const CategoryRow = styled.ul`

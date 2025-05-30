@@ -10,6 +10,7 @@ import { BestReviewSection } from "../modules/home/review/BestReviewSection";
 import TextContent from "../modules/home/nowReview/TextContent";
 import Post from "../modules/home/nowReview/Post";
 import BestCategoryList from "../modules/home/bestCategory/BestCategoryList";
+import ActionButtons from "../modules/home/footer/ActionButtons";
 
 
 const SearchContainer = styled.main`
@@ -75,6 +76,7 @@ function HomePage() {
       </SectionWrapper>
       
       <BestCategoryList />
+      <ActionButtons />
       <Footer />
     </SearchContainer>
   );
