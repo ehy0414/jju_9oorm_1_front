@@ -6,6 +6,7 @@ import { ImageBanner } from "../modules/home/ImageBanner";
 import CategoryList from "../modules/home/category/CategoryList";
 import ClassList from "../modules/home/class/ClassList";
 import Footer from "../layout/footer/Footer";
+import { BestReviewSection } from "../modules/home/review/BestReviewSection";
 
 
 const SearchContainer = styled.main`
@@ -25,6 +26,7 @@ function HomePage() {
       <ImageBanner />
       <CategoryList/>
       <ClassList />
+      <BestReviewSection />
       <Footer />
     </SearchContainer>
   );
