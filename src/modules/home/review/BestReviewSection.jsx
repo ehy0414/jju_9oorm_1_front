@@ -4,8 +4,6 @@ import img from "../images/cake.png";
 
 const SectionWrapper = styled.section`
   padding: 15px;
-    margin-bottom: 100px;
-
 `;
 
 const Title = styled.h2`
@@ -68,6 +66,13 @@ const reviews = [
   {
     id: 2,
     name: "김영희",
+    rating: 5.0,
+    text: "처음엔 걱정했는데 재밌고 쉽게 배울 수 있었어요!",
+    profileImg: "https://via.placeholder.com/40"
+  },
+  {
+    id: 3,
+    name: "홍길동",
     rating: 5.0,
     text: "처음엔 걱정했는데 재밌고 쉽게 배울 수 있었어요!",
     profileImg: "https://via.placeholder.com/40"
