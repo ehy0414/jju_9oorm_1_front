@@ -12,28 +12,36 @@ const CategoryChip = ({ imageUrl, title }) => {
 
 const ChipArticle = styled.article`
   display: flex;
-  flex-direction: column; /* 세로로 배치 */
-  align-items: center;     /* 가운데 정렬 */
-  justify-content: center;
-  gap: 4px;                /* 이미지와 텍스트 사이 간격 */
-  padding: 12px;
-  border-radius: 6px;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 2px 12px;
+  border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   width: 75px;
+  height: 50px;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    cursor: pointer;
+  }
 `;
 
 const CategoryImage = styled.img`
-  width: 26px;
-  height: 26px;
-  object-fit: contain;
-  margin-top: 14px;
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 6px;
 `;
 
 const CategoryTitle = styled.h3`
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 13px;
   font-weight: 500;
-  margin-top: 6px;  /* 원하는 만큼 내려줌 */
+  margin: 0;
+  color: #333;
 `;
 
 
