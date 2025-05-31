@@ -1,5 +1,6 @@
 "use client";
 import * as React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 const ActionButton = styled.button`
@@ -41,29 +42,30 @@ const ButtonContainer = styled.nav`
 `;
 
 function ActionButtons() {
-  return (
-    <ButtonContainer>
-      <ActionButton
-        onClick={() => console.log('View all classes')}
-        aria-label="View all classes"
-      >
-        모든 클래스 보기
-      </ActionButton>
-      <ActionButton
-        onClick={() => console.log('View cart')}
-        aria-label="View shopping cart"
-      >
-        장바구니 보기
-      </ActionButton>
-      <ActionButton
-        $inverse
-        onClick={() => console.log('Contact expert')}
-        aria-label="Contact an expert"
-      >
-        전문가에게 문의하기
-      </ActionButton>
-    </ButtonContainer>
-  );
+    const navigate = useNavigate();
+    return (
+        <ButtonContainer>
+        <ActionButton
+            onClick={() => navigate(`/class`)}
+            aria-label="View all classes"
+        >
+            모든 클래스 보기
+        </ActionButton>
+        <ActionButton
+            onClick={() => console.log('View cart')}
+            aria-label="View shopping cart"
+        >
+            장바구니 보기
+        </ActionButton>
+        <ActionButton
+            $inverse
+            onClick={() => console.log('Contact expert')}
+            aria-label="Contact an expert"
+        >
+            전문가에게 문의하기
+        </ActionButton>
+        </ButtonContainer>
+    );
 }
 
 export default ActionButtons;

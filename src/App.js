@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import LoginHandeler from './modules/login/LoginHandeler';
 import LoginPage from './page/LoginPage';
 import HomePage from './page/HomePage';
+import ClassPage from './page/ClassPage';
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
 
         {/* 홈페이지 */}
         <Route path='/home' element={<HomePage/>} />
+
+        {/* 클래스 페이지 */}
+        <Route path='/class' element={<ClassPage/>} />
 
         <Route
           path="/auth/kakao/callback" //redirect_url
