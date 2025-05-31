@@ -1,7 +1,6 @@
 "use client";
 import * as React from "react";
 import styled from "styled-components";
-import BackIcon from "./BackIcon";
 import { useNavigate } from "react-router-dom";
 
 function ClassHeader() {
