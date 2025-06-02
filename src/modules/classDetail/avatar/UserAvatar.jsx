@@ -21,10 +21,12 @@ const AvatarContainer = styled.div`
   margin-top: 8px;
   padding-left: 12px;
   padding-right: 12px;
-  padding-top: 16px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   align-items: center;
   gap: 12px;
   justify-content: start;
+  border: 1px solid lightgray;
 `;
 
 const ContentWrapper = styled.div`

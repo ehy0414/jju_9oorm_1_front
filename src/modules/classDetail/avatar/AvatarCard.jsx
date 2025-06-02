@@ -17,7 +17,7 @@ const AvatarCard = () => {
 };
 
 const CardContainer = styled.article`
-  max-width: 355px;
+  max-width: 360px;
   padding-top: 8px;
   font-family: Roboto, -apple-system, Roboto, Helvetica, sans-serif;
   white-space: nowrap;

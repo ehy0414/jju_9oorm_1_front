@@ -6,6 +6,7 @@ import ClassHeader from "../modules/header/ClassHeader";
 import AvatarCard from "../modules/classDetail/avatar/AvatarCard";
 import ClassIntroduction from "../modules/classDetail/classInfo/ClassIntroduction";
 import { BestReviewSection } from "../modules/home/review/BestReviewSection";
+import ActionButtons from "../modules/classDetail/footer/ActionButtons";
 
 const SearchContainer = styled.main`
     width: 360px;
@@ -27,6 +28,7 @@ function ClassDetailPage() {
         <AvatarCard />
         <ClassIntroduction />
         <BestReviewSection />
+        <ActionButtons />
         <Footer />
     </SearchContainer>
   );
