@@ -7,6 +7,7 @@ import AvatarCard from "../modules/classDetail/avatar/AvatarCard";
 import ClassIntroduction from "../modules/classDetail/classInfo/ClassIntroduction";
 import { BestReviewSection } from "../modules/home/review/BestReviewSection";
 import ActionButtons from "../modules/classDetail/footer/ActionButtons";
+import KakaoMap from "../modules/classDetail/map/KaKaoMap";
 
 const SearchContainer = styled.main`
     width: 360px;
@@ -28,6 +29,7 @@ function ClassDetailPage() {
         <AvatarCard />
         <ClassIntroduction />
         <BestReviewSection />
+        <KakaoMap />
         <ActionButtons />
         <Footer />
     </SearchContainer>
