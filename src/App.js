@@ -4,6 +4,7 @@ import LoginHandeler from './modules/login/LoginHandeler';
 import LoginPage from './page/LoginPage';
 import HomePage from './page/HomePage';
 import ClassPage from './page/ClassPage';
+import ClassDetailPage from './page/ClassDetailPage';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
 
         {/* 클래스 페이지 */}
         <Route path='/class' element={<ClassPage/>} />
+
+        {/* 클래스 상세페이지 */}
+        <Route path='/classDetail' element={<ClassDetailPage/>} />
 
         <Route
           path="/auth/kakao/callback" //redirect_url

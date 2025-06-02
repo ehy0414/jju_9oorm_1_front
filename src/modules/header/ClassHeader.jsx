@@ -3,7 +3,7 @@ import * as React from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 
-function ClassHeader() {
+function ClassHeader(props) {
     const navigate = useNavigate();
   return (
     <HeaderWrapper>
@@ -26,7 +26,7 @@ function ClassHeader() {
             />
         </svg>
         </IconWrapper>
-        <Title>HOT 클래스</Title>
+        <Title>{props.title}</Title>
       </HeaderContent>
     </HeaderWrapper>
   );

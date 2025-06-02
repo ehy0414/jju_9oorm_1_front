@@ -7,6 +7,7 @@ import Footer from "../layout/footer/Footer";
 import ClassHeader from "../modules/header/ClassHeader";
 import ClassList from "../modules/home/class/ClassList";
 import Post from "../modules/home/nowReview/Post";
+import CategoryList from "../modules/home/category/CategoryList";
 
 const SearchContainer = styled.main`
     width: 360px;
@@ -52,8 +53,9 @@ function ClassPage() {
 
   return (
     <SearchContainer>
-      <ClassHeader />
+      <ClassHeader title={"HOT 클래스"}/>
       <ImageBanner />
+      <CategoryList/>
       <ClassList />
 
       <SectionWrapper>
