@@ -7,7 +7,7 @@ const SectionWrapper = styled.section`
 `;
 
 const Title = styled.h2`
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
   margin-bottom: 16px;
 `;
