@@ -4,6 +4,7 @@ import { ImageBanner } from "../modules/home/ImageBanner";
 import Footer from "../layout/footer/Footer";
 import ClassHeader from "../modules/header/ClassHeader";
 import AvatarCard from "../modules/classDetail/avatar/AvatarCard";
+import ClassIntroduction from "../modules/classDetail/classInfo/ClassIntroduction";
 
 const SearchContainer = styled.main`
     width: 360px;
@@ -23,6 +24,7 @@ function ClassDetailPage() {
         <ClassHeader title={"클래스 상세"}/>
         <ImageBanner />
         <AvatarCard />
+        <ClassIntroduction />
         <Footer />
     </SearchContainer>
   );
